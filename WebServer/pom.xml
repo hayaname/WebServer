@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ru.apache_maven.webserver</groupId>
+  <artifactId>WebServer</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>WebServer</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jettyVersion>9.0.2.v20130417</jettyVersion>
+    <glassfish.javax.version>2.2.3</glassfish.javax.version>
+    <glassfish.javax-impl.version>2.2</glassfish.javax-impl.version>
+    <glassfish.jstl.version>1.2</glassfish.jstl.version>
+  </properties>
+
+  <build>
+        <plugins>
+
+			<plugin>
+  				<groupId>org.apache.maven.plugins</groupId>
+  				<artifactId>maven-jar-plugin</artifactId>
+  				<version>2.4</version>
+  			<configuration>
+				<archive>
+
+				<manifest>
+					<mainClass>ru.apache_maven.webserver.WebServer</mainClass>
+				</manifest>
+
+				</archive>
+  			</configuration>
+ 			</plugin>
+
+ 			<plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jettyVersion}</version>
+      </plugin>
+
+         </plugins>
+      </build>
+
+
+  <dependencies>
+
+    <dependency>
+      	<groupId>junit</groupId>
+      	<artifactId>junit</artifactId>
+      	<version>3.8.1</version>
+      	<scope>test</scope>
+    </dependency>
+
+     <dependency>
+      <groupId>org.eclipse.jetty.orbit</groupId>
+      <artifactId>javax.servlet</artifactId>
+      <version>3.0.0.v201112011016</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-webapp</artifactId>
+      <version>8.1.10.v20130312</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-annotations</artifactId>
+      <version>8.1.10.v20130312</version>
+    </dependency>
+        <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>8.1.10.v20130312</version>
+    </dependency>
+
+	<dependency>
+			<groupId>net.sf.squirrel-sql.plugins</groupId>
+			<artifactId>derby</artifactId>
+			<version>3.5.0</version>
+	</dependency>
+
+	<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.10.1.1</version>
+	</dependency>
+
+<dependency>
+	<groupId>org.mortbay.jetty</groupId>
+	<artifactId>jsp-api-2.1</artifactId>
+	<version>7.0.0pre2</version>
+</dependency>
+
+<dependency>
+	<groupId>org.mortbay.jetty</groupId>
+	<artifactId>jsp-2.1-glassfish</artifactId>
+	<version>9.1.02.B04.p0</version>
+</dependency>
+
+
+  </dependencies>
+
+</project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javae
+    /web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+  <display-name>JSPContainer</display-name>
+  <servlet>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <servlet-class>ru.apache_maven.webserver.AuthenticationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthenticationServlet</servlet-name>
+    <url-pattern>/authentication.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SettingsServlet</servlet-name>
+    <servlet-class>ru.apache_maven.webserver.SettingsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SettingsServlet</servlet-name>
+    <url-pattern>/settings.jsp</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <servlet-name>ShutDownServlet</servlet-name>
+    <servlet-class>ru.apache_maven.webserver.ShutDownServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShutDownServlet</servlet-name>
+    <url-pattern>/shutdown.jsp</url-pattern>
+  </servlet-mapping>
+
+</web-app>
